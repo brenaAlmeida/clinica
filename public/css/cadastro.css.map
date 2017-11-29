@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,QAAS,GACL,UAAU,EAAE,IAAe,EAC3B,OAAO,EAJE,IAAI,EAKb,MAAM,EAAE,iBAAiB,EAErB,aAAM,EAAE,GAAG;AAEf,eAAO,GACH,OAAO,EAAE,GAAiB,EAC1B,KAAK,EAAE,KAAgB,EACvB,MAAM,EAAE,iBAAiB,EAErB,aAAM,EAAE,GAAG",
-"sources": ["../sass/cadastro.scss"],
-"names": [],
-"file": "cadastro.css"
-}

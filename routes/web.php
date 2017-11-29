@@ -11,5 +11,3 @@
 
      
      $app->get('/', 'app\controllers\HomeController:view')->setName('home');
-     $app->get('/cadastro', 'app\controllers\CadastroController:view')->setName('cadastro');
-
