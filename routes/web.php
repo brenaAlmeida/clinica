@@ -11,3 +11,8 @@
 
      
      $app->get('/', 'app\controllers\HomeController:view')->setName('home');
+     $app->get('/cliente', 'app\controllers\ClienteController:view')->setName('cliente');
+     $app->get('/funcionario', 'app\controllers\FuncionarioController:view')->setName('funcionario');
+     $app->get('/dash', 'app\controllers\DashController:view')->setName('dash');
+     $app->get('/fornecedor', 'app\controllers\FornecedorController:view')->setName('fornecedor');
+     

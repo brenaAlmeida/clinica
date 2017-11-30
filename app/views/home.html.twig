@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title> Cliníca </title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-        <link rel="stylesheet" type="text/css" href="public/components/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="public/components/font-awesome/css/font-awesome.min.css" />
-    </head>
-    <body>
-        <div>Hello World</div>
-    </body>
-</html>
+{% extends "base.html.twig" %}
 
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-md-center" style="margin-top: 180px; padding: 20px;">
+            <div class="card" style="width: 20rem; margin-right: 50px;">
+                <div class="card-body">
+                  <h4 class="card-title">Cliente</h4>
+                  <p class="card-text">Área de autenticação do cliente, caso seja um cliente acesse essa página.</p>
+                  <a href="cliente" class="btn btn-primary">Clique Aqui</a>
+                </div>
+            </div>
 
+            <div class="card" style="width: 20rem; margin-left: 50px;">
+                <div class="card-body">
+                  <h4 class="card-title">Funcionário</h4>
+                  <p class="card-text">Área de autenticação do funcionário, caso seja um funcionário acesse essa página.</p>
+                  <a href="funcionario" class="btn btn-primary">Clique Aqui</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
