@@ -1,0 +1,69 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                      <label>Nome</label>
+                      <input type="text" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                      <label>Endereço</label>
+                      <input type="text" class="form-control" placeholder="1234 Main St" required />
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>Bairro</label>
+                        <input type="text" class="form-control" required />
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label>Cidade</label>
+                        <input type="text" class="form-control" required />
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label>UF</label>
+                        <select class="form-control">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-8">
+                        <label>Telefone</label>
+                        <input type="tel" class="form-control" required />
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label>CEP</label>
+                        <input type="text" class="form-control" required />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Data de Admissão</label>
+                      <input type="date" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                      <label>Cargo</label>
+                      <select class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                      <label>Endereço Eletrônico/E-mail</label>
+                      <input type="email" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                      <label>Senha</label>
+                      <input type="password" class="form-control" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar Funcionário</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
