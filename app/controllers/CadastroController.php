@@ -11,5 +11,11 @@ class CadastroController extends Controller {
         ]);
     }
     
+    public function viewClie() {
+        echo $this->twig->render('cadastroCli.html.twig', [
+            
+        ]);
+    }
+    
 }
 
