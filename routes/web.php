@@ -11,10 +11,10 @@
 
      
      $app->get('/', 'app\controllers\HomeController:view')->setName('home');
-     $app->get('/cliente', 'app\controllers\ClienteController:view')->setName('cliente');
-     $app->get('/funcionario', 'app\controllers\FuncionarioController:view')->setName('funcionario');
+     $app->get('/cliente', 'app\controllers\ClienteController:viewLogin')->setName('cliente-login');
+     $app->get('/funcionario', 'app\controllers\FuncionarioController:viewLogin')->setName('funcionario-login');
      $app->get('/dash', 'app\controllers\DashController:view')->setName('dash');
      $app->get('/fornecedor', 'app\controllers\FornecedorController:view')->setName('fornecedor');
-     $app->get('/cadastro-funcionario', 'app\controllers\CadastroController:viewFunc')->setName('cadastro-funcionario');
-     $app->get('/cadastro-cliente', 'app\controllers\CadastroController:viewClie')->setName('cadastro-cliente');
+     $app->get('/cadastro-funcionario', 'app\controllers\FuncionarioController:viewCadastroF')->setName('cadastro-funcionario');
+     $app->get('/cadastro-cliente', 'app\controllers\FuncionarioController:viewCadastroC')->setName('cadastro-cliente');
      
