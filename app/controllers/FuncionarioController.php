@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Employees;
 
 class FuncionarioController extends Controller {
     
@@ -15,6 +16,22 @@ class FuncionarioController extends Controller {
     
     public function viewCadastroC() {
         echo $this->twig->render('cadastroCliente.html.twig', []);
+    }
+    
+    public function cadastrarFuncionario() {
+        $datas = $this->request->getParsedBody();
+        
+        if(!empty($datas)) {
+            $cadastrar = Employees::cadastrar($datas);
+            
+            if($cadastrar->status === false) {
+                echo $this->twig->render('cadastroFuncionario.html.twig', [
+                    'errors' => $cadastrar->errors
+                ]);
+            } else {
+                $this->router->redirectTo('dash', []);
+            }
+        }
     }
 }
 
