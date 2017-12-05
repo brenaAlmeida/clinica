@@ -2,8 +2,11 @@
 
 namespace app\controllers;
 
-use app\models\Employees;
-use app\models\Customers;
+use app\models\{
+    Customers,
+    Employees,
+    Providers
+};
 
 class FuncionarioController extends Controller {
     
@@ -45,9 +48,22 @@ class FuncionarioController extends Controller {
                 echo $this->twig->render('cadastroCliente.html.twig', [
                     'errors' => $cadastrar->errors
                 ]);
-                echo "<pre>";
-                var_dump($cadastrar->errors);
-                echo "</pre>";
+            } else {
+                $this->router->redirectTo('dash', []);
+            }
+        }
+    }
+    
+    public function cadastrarFornecedor() {
+        $datas = $this->request->getParsedBody();
+        
+        if(!empty($datas)) {
+            $cadastrar = Providers::cadastrar($datas);
+            
+            if($cadastrar->status === false) {
+                echo $this->twig->render('cadastroFornecedor.html.twig', [
+                    'errors' => $cadastrar->errors
+                ]);
             } else {
                 $this->router->redirectTo('dash', []);
             }

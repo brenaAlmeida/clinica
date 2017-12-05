@@ -18,5 +18,6 @@
      $app->get('/cadastro-funcionario', 'app\controllers\FuncionarioController:viewCadastroF')->setName('cadastro-funcionario');
      $app->get('/cadastro-cliente', 'app\controllers\FuncionarioController:viewCadastroC')->setName('cadastro-cliente');
      
-     $app->post('/cadastro-funcionario', 'app\controllers\FuncionarioCOntroller:cadastrarFuncionario');
-     $app->post('/cadastro-cliente', 'app\controllers\FuncionarioCOntroller:cadastrarCliente');
+     $app->post('/cadastro-funcionario', 'app\controllers\FuncionarioController:cadastrarFuncionario');
+     $app->post('/cadastro-cliente', 'app\controllers\FuncionarioController:cadastrarCliente');
+     $app->post('/cadastro-fornecedor', 'app\controllers\FuncionarioController:cadastrarFornecedor');
