@@ -19,3 +19,4 @@
      $app->get('/cadastro-cliente', 'app\controllers\FuncionarioController:viewCadastroC')->setName('cadastro-cliente');
      
      $app->post('/cadastro-funcionario', 'app\controllers\FuncionarioCOntroller:cadastrarFuncionario');
+     $app->post('/cadastro-cliente', 'app\controllers\FuncionarioCOntroller:cadastrarCliente');

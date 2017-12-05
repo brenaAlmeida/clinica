@@ -3,29 +3,51 @@
 {% block content %}
     <div class="container">
         <div class="row justify-content-md-center">
-            <div class="col-6">
-                <form>
+            <div class="col-8">
+                <form method="post">
+                    <h2 class="text-center"> Dados Cliente </h2>
+                    <hr />
                     <div class="form-group">
                       <label>Nome</label>
                       <input type="text" class="form-control" name="nome" />
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[0] }}
+                            </small>
+                        {% endif %}
                     </div>
                     <div class="form-group">
                       <label>Endereço</label>
                       <input type="text" class="form-control" name="endereco" />
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[1] }}
+                            </small>
+                        {% endif %}
                     </div>
                     <div class="form-row">
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-md-4">
                         <label>Bairro</label>
                         <input type="text" class="form-control" name="bairro" />
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[2] }}
+                            </small>
+                        {% endif %}
                       </div>
                       <div class="form-group col-md-4">
                         <label>Cidade</label>
                         <input type="text" class="form-control" name="cidade" />
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[3] }}
+                            </small>
+                        {% endif %}
                       </div>
-                      <div class="form-group col-md-2">
+                      <div class="form-group col-md-4">
                         <label>UF</label>
                         <select class="form-control" name="uf">
-                          <option selected> Escolha o UF</option>
+                          <option selected value=""> Escolha o UF</option>
                           <option value="AC">AC</option>
                           <option value="AL">AL</option>
                           <option value="AM">AM</option>
@@ -54,21 +76,75 @@
                           <option value="SP">SP</option>
                           <option value="TO">TO</option>  
                         </select>
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[4] }}
+                            </small>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>CPF</label>
+                        <input type="text" class="form-control" name="cpf" placeholder="888.888.888-88" maxlength="14" />
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[5] }}
+                            </small>
+                        {% endif %}
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>Telefone</label>
+                        <input type="tel" class="form-control" name="telefone" placeholder="(88) 88888-8888" maxlength="15" />
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[6] }}
+                            </small>
+                        {% endif %}
                       </div>
                     </div>
                     <div class="form-group">
                       <label>Endereço Eletrônico/E-mail</label>
                       <input type="email" class="form-control" name="email" />
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[7] }}
+                            </small>
+                        {% endif %}
                     </div>
-                    <div class="form-group">
-                      <label>Data da Consulta</label>
-                      <input type="datetime" class="form-control" name="dataConsulta"/>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>Data da Consulta</label>
+                        <input type="date" class="form-control" name="data_consulta"/>
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[8] }}
+                            </small>
+                        {% endif %}
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>Horário da Consulta</label>
+                        <input type="time" class="form-control" name="horario_consulta" />
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[9] }}
+                            </small>
+                        {% endif %}
+                      </div>
                     </div>
                     <div class="form-group">
                         <label>Serviços</label>
                         <select class="form-control" multiple name="servicos">
-                          
+                            <option value="completo"> Exame Completo</option>
+                            <option value="lipoaspiracao"> Lipoaspiração </option>
+                            <option value="estetica"> Estética </option>
+                            <option value="tratamento capilar"> Tratamento Capilar </option>
                         </select>
+                        {% if errors %}
+                            <small class="form-text text-danger">
+                              {{ errors[10] }}
+                            </small>
+                        {% endif %}
                     </div>
                     <button type="submit" class="btn btn-primary">Cadastrar Cliente</button>
                 </form>
